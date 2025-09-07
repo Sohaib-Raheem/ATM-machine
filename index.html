@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ATM Machine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ATM Machine</h1>
+    <h3>Insert your Card Please ....</h3>
+    <button id="insert-button" onclick="insert()">Insert</button>
+    
+    <div style="display:none" id="input-pin">
+      <input type="number" placeholder="Enter your pin" id="pin" >
+      <input type="submit" onclick="submit()">
+    </div>
+    
+    <div style="display:none" id="user-action">
+      <button onclick="inquiry()">Inquiry Balance</button>
+      <button onclick="deposit()">Deposit</button>
+      <button onclick="withdraw()">Withdrawal</button>
+      <button onclick="quit()">Quit</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+        </html>
