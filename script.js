@@ -34,7 +34,7 @@ function deposit(){
 
 function withdraw(){
   var withdrawAmount = +prompt("How much amount u want to withdraw.....?");
-  if(withdrawAmount == amount){
+  if(withdrawAmount <= amount){
   amount -= withdrawAmount;
   alert("amount withdrawn successfuly......!")
   inquiry();
