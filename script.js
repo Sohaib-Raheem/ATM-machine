@@ -15,7 +15,12 @@ function submit(){
     userAction.style.display="block"
   }
   else{
-    alert("Please input correct Pin")
+Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: "please enter your correct pin!",
+});
+    
   }
   userInputPin.value=""
 }
@@ -41,7 +46,11 @@ function withdraw(){
     
   }
   else{
-    alert("You have isufficient amount in your account , transaction declined.....!")
+    Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: "You have isufficient amount in your account , transaction declined.....!!",
+});
   }
 }
 function quit(){
