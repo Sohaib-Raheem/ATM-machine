@@ -11,7 +11,11 @@ inputPin.style.display="block";
 
 function submit(){
   if(userInputPin.value == correctPin){
-    alert("you have entered correct Pin")
+   Swal.fire({
+  title: "✔ Correct PIN! Proceed to your transactions.",
+  icon: "success",
+  draggable: true
+});
     userAction.style.display="block"
   }
   else{
@@ -26,13 +30,19 @@ Swal.fire({
 }
 
 function inquiry(){
-  alert("your current amount is "+ amount +" rupees...")
+  Swal.fire("your current amount is "+ amount +" rupees...");
+  
 }
 
 function deposit(){
   var depositAmount = +prompt("How much amount u want to deposit.....?");
   amount += depositAmount;
-  alert("amount deposited successfuly......!")
+  Swal.fire({
+  title: "Amount Deposited successfully .....!",
+  icon: "success",
+  draggable: true
+});
+  
   inquiry();
   
 }
@@ -41,7 +51,11 @@ function withdraw(){
   var withdrawAmount = +prompt("How much amount u want to withdraw.....?");
   if(withdrawAmount <= amount){
   amount -= withdrawAmount;
-  alert("amount withdrawn successfuly......!")
+  Swal.fire({
+  title: "Amount withdrawn successfully .....!",
+  icon: "success",
+  draggable: true
+});
   inquiry();
     
   }
