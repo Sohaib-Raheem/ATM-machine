@@ -37,7 +37,7 @@ function inquiry(){
 function deposit(){
   var depositAmount = +prompt("How much amount u want to deposit.....?");
   amount += depositAmount;
-  Swal.fire({
+Swal.fire({
   title: "Amount Deposited successfully .....!",
   icon: "success",
   draggable: true
@@ -51,7 +51,7 @@ function withdraw(){
   var withdrawAmount = +prompt("How much amount u want to withdraw.....?");
   if(withdrawAmount <= amount){
   amount -= withdrawAmount;
-  Swal.fire({
+Swal.fire({
   title: "Amount withdrawn successfully .....!",
   icon: "success",
   draggable: true
