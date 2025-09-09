@@ -42,7 +42,13 @@ function deposit(){
       min: 1
     },
     showCancelButton: true,
-    confirmButtonText: "Deposit"
+    confirmButtonText: "Deposit",
+    cancelButtonText: "Cancel",
+    customClass: {
+      input: "my-input",   // custom CSS class for input
+      confirmButton: "my-confirm-btn",
+      cancelButton: "my-cancel-btn"
+    }
   }).then((result) => {
     if (result.isConfirmed) {
       let depositAmount = +result.value;
@@ -72,7 +78,13 @@ function withdraw(){
       min: 1
     },
     showCancelButton: true,
-    confirmButtonText: "Withdraw"
+    confirmButtonText: "Withdraw",
+    cancelButtonText: "Cancel",
+    customClass: {
+      input: "my-input",   // same CSS class for styling
+      confirmButton: "my-confirm-btn",
+      cancelButton: "my-cancel-btn"
+    }
   }).then((result) => {
     if (result.isConfirmed) {
       let withdrawAmount = +result.value;
