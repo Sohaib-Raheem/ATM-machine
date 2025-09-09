@@ -7,7 +7,7 @@ var amount = 20000;
 
 function insert(){
 inputPin.style.display="block";
-
+insertButton.style.display="block";
 }
 
 function submit(){
