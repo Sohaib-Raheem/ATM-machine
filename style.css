@@ -84,29 +84,42 @@ input[type="number"] {
 }
 
 .swal2-popup .my-input {
+.swal2-input {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
   text-align: center;
   font-size: 18px;
-  padding: 10px;
-  border: 2px solid #6c63ff;
-  border-radius: 10px;
+  padding: 12px;
+
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border: 2px solid rgba(108, 99, 255, 0.7);
+  border-radius: 12px;
+
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.swal2-popup .my-confirm-btn {
-  background-color: #6c63ff;
-  color: #fff;
-  border-radius: 8px;
-  padding: 8px 20px;
-  border: none;
-  cursor: pointer;
+
+.swal2-confirm {
+  background: linear-gradient(135deg, #6c63ff, #4a47d5) !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  padding: 10px 22px !important;
+  font-weight: bold !important;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2) !important;
 }
 
-.swal2-popup .my-cancel-btn {
-  background-color: #aaa;
-  color: #fff;
-  border-radius: 8px;
-  padding: 8px 20px;
-  border: none;
-  cursor: pointer;
+
+.swal2-cancel {
+  background: linear-gradient(135deg, #999, #777) !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  padding: 10px 22px !important;
+  font-weight: bold !important;
 }
 
 
