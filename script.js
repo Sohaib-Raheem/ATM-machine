@@ -1,5 +1,6 @@
 var inputPin = document.getElementById("input-pin")
 var userInputPin = document.getElementById("pin")
+var insert = document.getElementById("insert-button")
 var correctPin=1234;
 var userAction = document.getElementById("user-action")
 var amount = 20000;
@@ -17,6 +18,7 @@ function submit(){
   draggable: true
 });
     inputPin.style.display="none";
+    insert.style.display="none";
     userAction.style.display="block"
   }
   else{
@@ -107,6 +109,7 @@ function withdraw(){
   });
 }
 function quit(){
+  insert.style.display="block";
   inputPin.style.display="none";
   userAction.style.display="none"
     }
