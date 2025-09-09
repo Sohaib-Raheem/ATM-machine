@@ -83,12 +83,12 @@ input[type="number"] {
   margin-top: 20px;
 }
 
-.swal2-popup .my-input {
 .swal2-input {
-  display: block;
-  margin: 0 auto;
-  width: 60%;
-  text-align: center;
+  display: block;         /* block element */
+  width: 60% !important;  /* smaller width */
+  margin: 0 auto !important; /* horizontally center */
+  text-align: center;     /* text inside center */
+  
   font-size: 18px;
   padding: 12px;
 
