@@ -83,26 +83,30 @@ input[type="number"] {
   margin-top: 20px;
 }
 
-.my-input {
-  text-align: center;       
+.swal2-popup .my-input {
+  text-align: center;
   font-size: 18px;
   padding: 10px;
-  border: 2px solid #6c63ff; 
+  border: 2px solid #6c63ff;
   border-radius: 10px;
 }
 
-.my-confirm-btn {
-  background-color: #6c63ff !important; 
-  color: #fff !important;
-  border-radius: 8px !important;
-  padding: 8px 20px !important;
+.swal2-popup .my-confirm-btn {
+  background-color: #6c63ff;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 20px;
+  border: none;
+  cursor: pointer;
 }
 
-.my-cancel-btn {
-  background-color: #aaa !important; 
-  color: #fff !important;
-  border-radius: 8px !important;
-  padding: 8px 20px !important;
+.swal2-popup .my-cancel-btn {
+  background-color: #aaa;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 20px;
+  border: none;
+  cursor: pointer;
 }
 
 
