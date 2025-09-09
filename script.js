@@ -35,37 +35,63 @@ function inquiry(){
 }
 
 function deposit(){
-  var depositAmount = +prompt("How much amount u want to deposit.....?");
-  amount += depositAmount;
-Swal.fire({
-  title: "Amount Deposited successfully .....!",
-  icon: "success",
-  draggable: true
-});
-  
-  inquiry();
-  
+  Swal.fire({
+    title: "Enter deposit amount",
+    input: "number",
+    inputAttributes: {
+      min: 1
+    },
+    showCancelButton: true,
+    confirmButtonText: "Deposit"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      let depositAmount = +result.value;
+      if (depositAmount > 0) {
+        amount += depositAmount;
+        Swal.fire({
+          title: "Amount Deposited Successfully!",
+          text: "Your new balance is " + amount + " rupees.",
+          icon: "success"
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Invalid amount",
+          text: "Please enter a valid deposit amount!"
+        });
+      }
+    }
+  });
 }
 
 function withdraw(){
-  var withdrawAmount = +prompt("How much amount u want to withdraw.....?");
-  if(withdrawAmount <= amount){
-  amount -= withdrawAmount;
-Swal.fire({
-  title: "Amount withdrawn successfully .....!",
-  icon: "success",
-  draggable: true
-});
-  inquiry();
-    
-  }
-  else{
-    Swal.fire({
-  icon: "error",
-  title: "Oops...",
-  text: "You have isufficient amount in your account , transaction declined.....!!",
-});
-  }
+  Swal.fire({
+    title: "Enter withdrawal amount",
+    input: "number",
+    inputAttributes: {
+      min: 1
+    },
+    showCancelButton: true,
+    confirmButtonText: "Withdraw"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      let withdrawAmount = +result.value;
+      if (withdrawAmount > 0 && withdrawAmount <= amount) {
+        amount -= withdrawAmount;
+        Swal.fire({
+          title: "Amount Withdrawn Successfully!",
+          text: "Your new balance is " + amount + " rupees.",
+          icon: "success"
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Transaction Declined",
+          text: "Insufficient balance or invalid amount!"
+        });
+      }
+    }
+  });
 }
 function quit(){
   inputPin.style.display="none";
