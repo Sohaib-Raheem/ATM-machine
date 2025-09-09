@@ -16,6 +16,7 @@ function submit(){
   icon: "success",
   draggable: true
 });
+    inputPin.style.display="none";
     userAction.style.display="block"
   }
   else{
